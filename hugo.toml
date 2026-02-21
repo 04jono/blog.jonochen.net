@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = "Jonathan's Blog"
 theme = 'vibes'
 
+[taxonomies]
+  tag = 'tags'
+
 [menus]
   [[menus.main]]
     name = 'about'
