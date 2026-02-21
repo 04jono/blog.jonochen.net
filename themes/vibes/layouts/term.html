@@ -1,6 +1,6 @@
 {{ define "main" }}
   <section>
-    <a href="{{ .RelPermalink }}" class="tag active-tag">#{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}" class="tag active-tag">#{{ .Title | lower }}</a>
     {{ range .Pages }}
       <div class="post-entry">
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>

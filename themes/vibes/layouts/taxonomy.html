@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ range .Pages }}
     <section>
-      <a href="{{ .RelPermalink }}" class="tag">#{{ .LinkTitle }}</a>
+      <a href="{{ .RelPermalink }}" class="tag">#{{ .LinkTitle | lower }}</a>
       {{ range .Pages }}
         <div class="post-entry">
           <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
