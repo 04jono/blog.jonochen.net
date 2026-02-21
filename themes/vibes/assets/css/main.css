@@ -1,22 +1,170 @@
+html {
+    background-color: #282828;
+}
+
 body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    color: white;
 }
 
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+/* ── Header ── */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px 12px 16px;
+    border-bottom: 1px solid #3a3a3a;
 }
 
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+a.header-home-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
 }
 
-a {
-  color: #00e;
-  text-decoration: none;
+.header-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a.header-home-link.active .header-name {
+    border-bottom: 1px solid white;
+    line-height: 1.1;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+a.nav-tab {
+    color: #aaaaaa;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 0 6px;
+}
+
+a.nav-tab:hover { color: white; }
+a.nav-tab.active { color: white; text-decoration: underline; }
+
+/* ── Footer ── */
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    border-top: 1px solid #3a3a3a;
+    margin-top: 20px;
+}
+
+.footer-text {
+    color: #aaaaaa;
+    font-size: 12px;
+    margin: 0;
+}
+
+.footer-text a { color: #aaaaaa; text-decoration: underline; }
+.footer-text a:visited { color: #aaaaaa; }
+.footer-text a:hover { color: white; }
+
+/* ── Main content wrapper ── */
+
+.my-container {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* ── Content typography ── */
+
+.my-container h1,
+.my-container h2,
+.my-container h3 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.my-container h1 { font-size: 32px; }
+.my-container h2 { font-size: 24px; }
+.my-container h3 { font-size: 20px; }
+
+.my-container p {
+    font-size: 16px;
+    overflow-wrap: break-word;
+    margin: 10px 0;
+}
+
+.my-container a {
+    color: white;
+    text-decoration: underline;
+}
+
+.my-container ul,
+.my-container ol {
+    padding-left: 20px;
+    margin: 8px 0;
+}
+
+.my-container li {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.my-container time {
+    color: #aaaaaa;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.my-container section {
+    margin-bottom: 24px;
+}
+
+/* ── Post entries ── */
+
+.post-entry {
+    margin-bottom: 12px;
+}
+
+.post-entry a { font-size: 14px; }
+.post-entry time { font-size: 12px; display: block; margin-top: 2px; }
+
+/* ── Tags ── */
+
+.tags {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.tag {
+    color: #aaaaaa;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.tag:visited { color: #aaaaaa; }
+.tag:hover { color: white; }
+.tag.active-tag { color: white; text-decoration: underline; }
+
+.my-container section .tag {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.my-container section .post-entry {
+    padding-left: 12px;
 }

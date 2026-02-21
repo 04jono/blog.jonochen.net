@@ -1,3 +1,15 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://blog.jonochen.net/'
 languageCode = 'en-us'
-title = 'My New Hugo Project'
+title = "Jonathan's Blog"
+theme = 'vibes'
+
+[menus]
+  [[menus.main]]
+    name = 'about'
+    pageRef = '/about'
+    weight = 10
+
+[[menus.main]]
+    name = 'tags'
+    pageRef = '/tags'
+    weight = 30
