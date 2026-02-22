@@ -1,20 +1,18 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-US'
-title = 'My New Hugo Project'
+languageCode = 'en-us'
+title = 'My Blog'
+
+[taxonomies]
+  tag = 'tags'
 
 [menus]
   [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
+    name = 'about'
+    pageRef = '/about'
     weight = 10
 
   [[menus.main]]
-    name = 'Posts'
-    pageRef = '/posts'
-    weight = 20
-
-  [[menus.main]]
-    name = 'Tags'
+    name = 'tags'
     pageRef = '/tags'
     weight = 30
 

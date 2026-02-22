@@ -8,5 +8,6 @@
     {{- range site.Menus.main }}
       <a href="{{ .URL }}" class="nav-tab{{ if $.IsMenuCurrent .Menu . }} active{{ end }}">{{ .Name }}</a>
     {{- end }}
+    <a href="{{ site.BaseURL }}index.xml" class="nav-tab">rss</a>
   </nav>
 </header>
