@@ -1,8 +1,13 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format ":date_long" }}</time>
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  <h1 class="post-title">{{ .Title }}</h1>
+  <div class="post-meta">
+    <span class="post-author">{{ site.Params.author.name }}</span>
+    <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format ":date_long" }}</time>
+  </div>
+  <div class="post-content">
+    {{ .Content }}
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </div>
   <nav class="post-nav">
     {{ with .PrevInSection }}
       <a href="{{ .RelPermalink }}" class="post-nav-link post-nav-prev">← {{ .Title }}</a>

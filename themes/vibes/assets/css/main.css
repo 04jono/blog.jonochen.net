@@ -97,6 +97,7 @@ a.nav-tab.active { color: white; text-decoration: underline; }
 }
 
 .my-container h1 { font-size: 32px; }
+.post-title { font-style: italic; }
 .my-container h2 { font-size: 24px; }
 .my-container h3 { font-size: 20px; }
 
@@ -125,8 +126,33 @@ a.nav-tab.active { color: white; text-decoration: underline; }
 .my-container time {
     color: #aaaaaa;
     font-size: 13px;
-    display: block;
-    margin-bottom: 8px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.post-author {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.post-author::after {
+    content: '/';
+    font-size: 18px;
+    margin-left: 8px;
+    color: #3a3a3a;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.post-content {
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 
@@ -175,7 +201,6 @@ a.tag.active-tag { color: white; text-decoration: underline; }
 .post-nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
     padding-top: 16px;
     border-top: 1px solid #3a3a3a;
 }

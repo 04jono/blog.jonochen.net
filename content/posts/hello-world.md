@@ -2,6 +2,7 @@
 date = '2026-02-20T22:42:57-05:00'
 draft = false
 title = 'Hello World'
+author = 'Jonathan Chen'
 tags = ['meta']
 +++
 

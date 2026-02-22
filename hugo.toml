@@ -2,6 +2,13 @@ baseURL = 'https://blog.jonochen.net/'
 languageCode = 'en-us'
 title = "Jonathan's Blog"
 theme = 'vibes'
+timeZone = 'America/New_York'
+
+[params]
+  mainSections = ['posts']
+
+  [params.author]
+    name = 'Jonathan Chen'
 
 [taxonomies]
   tag = 'tags'
